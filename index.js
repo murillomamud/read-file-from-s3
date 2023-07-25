@@ -6,6 +6,9 @@ export const handler = async (event) => {
     const bucket = event.queryStringParameters.bucket;
     const file = event.queryStringParameters.file;
 
+    console.log(bucket);
+    console.log(file);
+
     //read file from s3 bucket
     const s3 = new AWS.S3();
     const params = {
